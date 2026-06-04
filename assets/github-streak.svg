@@ -1,0 +1,19 @@
+<svg width="700" height="190" viewBox="0 0 700 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="700" height="190" rx="18" fill="#0d1117"/>
+  <rect x="1" y="1" width="698" height="188" rx="17" stroke="#30363d"/>
+
+  <text x="350" y="38" text-anchor="middle" fill="#7DF9FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">
+    GitHub Activity
+  </text>
+
+  <g font-family="Segoe UI, Arial, sans-serif">
+    <text x="116" y="92" text-anchor="middle" fill="#8b949e" font-size="14">Total Contributions</text>
+    <text x="116" y="128" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">1,025</text>
+
+    <text x="350" y="92" text-anchor="middle" fill="#8b949e" font-size="14">Current Streak</text>
+    <text x="350" y="128" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">2</text>
+
+    <text x="584" y="92" text-anchor="middle" fill="#8b949e" font-size="14">Longest Streak</text>
+    <text x="584" y="128" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">19</text>
+  </g>
+</svg>
