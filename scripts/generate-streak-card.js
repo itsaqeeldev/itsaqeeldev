@@ -230,7 +230,7 @@ const svg = `
 
   <!-- Footer -->
   <text x="420" y="233" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
-   VIA GITHUB 
+   BY GITHUB 
   </text>
 </svg>`.trim();
 
