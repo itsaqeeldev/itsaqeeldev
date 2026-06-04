@@ -181,9 +181,7 @@ const svg = `
   <text x="420" y="50" text-anchor="middle" fill="#D9F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1">
     GITHUB ACTIVITY
   </text>
-  <text x="420" y="72" text-anchor="middle" fill="#78BFD6" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2">
-    CYBERPUNK STATS PANEL
-  </text>
+ 
 
   <!-- Decorative line -->
   <line x1="290" y1="84" x2="550" y2="84" stroke="#113A56" stroke-width="1.5"/>
@@ -232,7 +230,7 @@ const svg = `
 
   <!-- Footer -->
   <text x="420" y="233" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
-    UPDATED AUTOMATICALLY VIA GITHUB ACTIONS
+   VIA GITHUB 
   </text>
 </svg>`.trim();
 
