@@ -130,6 +130,7 @@ async function main() {
     cursor = addDays(cursor, -1);
   }
 
+
   const svg = `
 <svg width="840" height="270" viewBox="0 0 840 270" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
@@ -170,15 +171,10 @@ async function main() {
   <rect width="840" height="270" rx="26" fill="url(#bg)"/>
   <rect x="1" y="1" width="838" height="268" rx="25" stroke="#15304D"/>
 
-  <!-- Outer glow lines -->
+  <!-- Top cyber frame -->
   <rect x="24" y="22" width="792" height="3" rx="1.5" fill="url(#cyanGlow)" filter="url(#softGlow)"/>
-  <rect x="24" y="232" width="792" height="2" rx="1" fill="url(#purpleGlow)" opacity="0.7" filter="url(#softGlow)"/>
-
-  <!-- Corner accents -->
   <path d="M24 42V24H42" stroke="#00E5FF" stroke-width="2"/>
   <path d="M798 24H816V42" stroke="#00E5FF" stroke-width="2"/>
-  <path d="M24 228V246H42" stroke="#7C4DFF" stroke-width="2"/>
-  <path d="M798 246H816V228" stroke="#7C4DFF" stroke-width="2"/>
 
   <!-- Header -->
   <text x="420" y="50" text-anchor="middle" fill="#D9F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1">
@@ -230,11 +226,18 @@ async function main() {
     ${formatNumber(longestStreak)}
   </text>
 
+  <!-- Bottom cyber frame moved up as one complete frame -->
+  <rect x="24" y="220" width="792" height="2" rx="1" fill="url(#purpleGlow)" opacity="0.75" filter="url(#softGlow)"/>
+  <path d="M24 204V222H42" stroke="#7C4DFF" stroke-width="2"/>
+  <path d="M798 222H816V204" stroke="#7C4DFF" stroke-width="2"/>
+
   <!-- Footer -->
-  <text x="420" y="257" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
+  <text x="420" y="248" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
     BY GITHUB
   </text>
 </svg>`.trim();
+
+
 
   fs.mkdirSync("assets", { recursive: true });
   fs.writeFileSync("assets/github-streak.svg", svg);
