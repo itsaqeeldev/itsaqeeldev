@@ -25,10 +25,10 @@
   <a href="https://www.linkedin.com/in/aqeel-abbas-58b3aa327">
     <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
-  <a href="https://github.com/Aqeelabbas34?tab=followers">
+<a href="https://github.com/itsaqeeldev?tab=followers">
     <img src="https://img.shields.io/github/followers/Aqeelabbas34?label=Followers&style=for-the-badge&logo=github&logoColor=white&color=181717" alt="Followers">
   </a>
-  <a href="https://github.com/Aqeelabbas34?tab=repositories">
+<a href="https://github.com/itsaqeeldev?tab=repositories">
     <img src="https://img.shields.io/badge/Repos-Explore-181717?style=for-the-badge&logo=github&logoColor=white" alt="Repos">
   </a>
 </p>
@@ -107,18 +107,30 @@
 
 </details>
 
-
-
----
-
 ## 📊 Live Stats
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=itsaqeeldev&show_icons=true&hide=issues&include_all_commits=true&count_private=true&theme=tokyonight" height="160" alt="Stats"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=itsaqeeldev&layout=compact&langs_count=8&theme=tokyonight" height="160" alt="Top Langs"/>
+  <img
+    src="https://github-readme-stats.vercel.app/api?username=itsaqeeldev&show_icons=true&hide=issues&include_all_commits=true&theme=tokyonight"
+    height="160"
+    alt="GitHub Stats"
+  />
+  <img
+    src="https://github-readme-stats.vercel.app/api/top-langs/?username=itsaqeeldev&layout=compact&langs_count=8&theme=tokyonight"
+    height="160"
+    alt="Top Languages"
+  />
 </p>
+
 <p align="center">
-  <img src="https://streak-stats.demolab.com?user=itsaqeeldev&theme=tokyonight" height="160" alt="Streak"/>
+  <img
+    src="https://streak-stats.demolab.com?user=itsaqeeldev&theme=tokyonight"
+    height="160"
+    alt="GitHub Streak"
+  />
 </p>
+```
+
 
 <!-- Animated extras -->
 <p align="center">
