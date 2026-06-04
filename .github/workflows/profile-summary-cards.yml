@@ -28,4 +28,4 @@ jobs:
           UTC_OFFSET: 5
           EXCLUDE: ""
           AUTO_PUSH: true
-```
+
