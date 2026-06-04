@@ -112,7 +112,7 @@
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/itsaqeeldev/itsaqeeldev/main/assets/github-streak.svg?v=cyberpunk-1"
+   src="assets/github-streak.svg?v=3"
     width="70%"
     alt="GitHub Activity Stats"
   />
