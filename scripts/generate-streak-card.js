@@ -127,25 +127,87 @@ async function main() {
     cursor = addDays(cursor, -1);
   }
 
-  const svg = `
-<svg width="700" height="190" viewBox="0 0 700 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="700" height="190" rx="18" fill="#0d1117"/>
-  <rect x="1" y="1" width="698" height="188" rx="17" stroke="#30363d"/>
+const svg = `
+<svg width="800" height="240" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
 
-  <text x="350" y="38" text-anchor="middle" fill="#7DF9FF" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="700">
+    <linearGradient id="accent" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Main Card -->
+  <rect width="800" height="240" rx="24" fill="url(#bg)"/>
+  <rect x="1" y="1" width="798" height="238" rx="23" stroke="#263244"/>
+
+  <!-- Top accent line -->
+  <rect x="24" y="20" width="752" height="4" rx="2" fill="url(#accent)" filter="url(#glow)"/>
+
+  <!-- Header -->
+  <text x="400" y="52" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">
     GitHub Activity
   </text>
+  <text x="400" y="74" text-anchor="middle" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="500">
+    Public + private contributions
+  </text>
 
-  <g font-family="Segoe UI, Arial, sans-serif">
-    <text x="116" y="92" text-anchor="middle" fill="#8b949e" font-size="14">Total Contributions</text>
-    <text x="116" y="128" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">${formatNumber(totalContributions)}</text>
+  <!-- Stat cards -->
+  <rect x="28" y="100" width="230" height="108" rx="18" fill="#0F172A"/>
+  <rect x="28.5" y="100.5" width="229" height="107" rx="17.5" stroke="#1E293B"/>
 
-    <text x="350" y="92" text-anchor="middle" fill="#8b949e" font-size="14">Current Streak</text>
-    <text x="350" y="128" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">${formatNumber(currentStreak)}</text>
+  <rect x="285" y="100" width="230" height="108" rx="18" fill="#0F172A"/>
+  <rect x="285.5" y="100.5" width="229" height="107" rx="17.5" stroke="#1E293B"/>
 
-    <text x="584" y="92" text-anchor="middle" fill="#8b949e" font-size="14">Longest Streak</text>
-    <text x="584" y="128" text-anchor="middle" fill="#ffffff" font-size="30" font-weight="800">${formatNumber(longestStreak)}</text>
-  </g>
+  <rect x="542" y="100" width="230" height="108" rx="18" fill="#0F172A"/>
+  <rect x="542.5" y="100.5" width="229" height="107" rx="17.5" stroke="#1E293B"/>
+
+  <!-- Small accent dots -->
+  <circle cx="55" cy="124" r="5" fill="#22D3EE"/>
+  <circle cx="312" cy="124" r="5" fill="#60A5FA"/>
+  <circle cx="569" cy="124" r="5" fill="#A78BFA"/>
+
+  <!-- Labels -->
+  <text x="72" y="129" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">
+    Total Contributions
+  </text>
+  <text x="329" y="129" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">
+    Current Streak
+  </text>
+  <text x="586" y="129" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">
+    Longest Streak
+  </text>
+
+  <!-- Values -->
+  <text x="143" y="173" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">
+    ${formatNumber(totalContributions)}
+  </text>
+
+  <text x="400" y="173" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">
+    ${formatNumber(currentStreak)}
+  </text>
+
+  <text x="657" y="173" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">
+    ${formatNumber(longestStreak)}
+  </text>
+
+  <!-- Tiny footer -->
+  <text x="400" y="222" text-anchor="middle" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="11">
+    Updated automatically via GitHub Actions
+  </text>
 </svg>`.trim();
 
   fs.mkdirSync("assets", { recursive: true });
