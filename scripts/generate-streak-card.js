@@ -1,3 +1,4 @@
+
 const fs = require("fs");
 
 const username = process.env.GITHUB_USERNAME;
@@ -93,7 +94,9 @@ async function main() {
   }
 
   const today = new Date();
-  const todayUtc = new Date(Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate()));
+  const todayUtc = new Date(
+    Date.UTC(today.getUTCFullYear(), today.getUTCMonth(), today.getUTCDate())
+  );
 
   let totalContributions = 0;
   let longestStreak = 0;
@@ -127,10 +130,10 @@ async function main() {
     cursor = addDays(cursor, -1);
   }
 
-const svg = `
-<svg width="840" height="250" viewBox="0 0 840 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const svg = `
+<svg width="840" height="270" viewBox="0 0 840 270" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="840" y2="250" gradientUnits="userSpaceOnUse">
+    <linearGradient id="bg" x1="0" y1="0" x2="840" y2="270" gradientUnits="userSpaceOnUse">
       <stop offset="0" stop-color="#050816"/>
       <stop offset="0.55" stop-color="#0A1023"/>
       <stop offset="1" stop-color="#071427"/>
@@ -164,24 +167,23 @@ const svg = `
   </defs>
 
   <!-- Background -->
-  <rect width="840" height="250" rx="26" fill="url(#bg)"/>
-  <rect x="1" y="1" width="838" height="248" rx="25" stroke="#15304D"/>
+  <rect width="840" height="270" rx="26" fill="url(#bg)"/>
+  <rect x="1" y="1" width="838" height="268" rx="25" stroke="#15304D"/>
 
   <!-- Outer glow lines -->
   <rect x="24" y="22" width="792" height="3" rx="1.5" fill="url(#cyanGlow)" filter="url(#softGlow)"/>
-  <rect x="24" y="225" width="792" height="2" rx="1" fill="url(#purpleGlow)" opacity="0.7" filter="url(#softGlow)"/>
+  <rect x="24" y="232" width="792" height="2" rx="1" fill="url(#purpleGlow)" opacity="0.7" filter="url(#softGlow)"/>
 
   <!-- Corner accents -->
   <path d="M24 42V24H42" stroke="#00E5FF" stroke-width="2"/>
   <path d="M798 24H816V42" stroke="#00E5FF" stroke-width="2"/>
-  <path d="M24 208V226H42" stroke="#7C4DFF" stroke-width="2"/>
-  <path d="M798 226H816V208" stroke="#7C4DFF" stroke-width="2"/>
+  <path d="M24 228V246H42" stroke="#7C4DFF" stroke-width="2"/>
+  <path d="M798 246H816V228" stroke="#7C4DFF" stroke-width="2"/>
 
   <!-- Header -->
   <text x="420" y="50" text-anchor="middle" fill="#D9F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1">
     GITHUB ACTIVITY
   </text>
- 
 
   <!-- Decorative line -->
   <line x1="290" y1="84" x2="550" y2="84" stroke="#113A56" stroke-width="1.5"/>
@@ -191,10 +193,10 @@ const svg = `
   <g filter="url(#panelGlow)">
     <rect x="28" y="105" width="244" height="102" rx="18" fill="#091426"/>
     <rect x="28.8" y="105.8" width="242.4" height="100.4" rx="17.2" stroke="#103B5D"/>
-    
+
     <rect x="298" y="105" width="244" height="102" rx="18" fill="#091426"/>
     <rect x="298.8" y="105.8" width="242.4" height="100.4" rx="17.2" stroke="#103B5D"/>
-    
+
     <rect x="568" y="105" width="244" height="102" rx="18" fill="#091426"/>
     <rect x="568.8" y="105.8" width="242.4" height="100.4" rx="17.2" stroke="#103B5D"/>
   </g>
@@ -229,8 +231,8 @@ const svg = `
   </text>
 
   <!-- Footer -->
-  <text x="420" y="233" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
-   BY GITHUB 
+  <text x="420" y="257" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
+    BY GITHUB
   </text>
 </svg>`.trim();
 
