@@ -107,15 +107,18 @@
 
 </details>
 
+
 ## 📊 Live Stats
 
 <p align="center">
   <img
-    src="https://raw.githubusercontent.com/itsaqeeldev/itsaqeeldev/main/assets/github-streak.svg"
+    src="assets/github-streak.svg"
     width="70%"
     alt="GitHub Activity Stats"
   />
 </p>
+```
+
 
 
 
