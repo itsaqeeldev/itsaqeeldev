@@ -112,7 +112,7 @@
 
 <p align="center">
   <img
-   src="assets/github-streak.svg?v=3"
+    src="assets/github-streak-cyber.svg"
     width="70%"
     alt="GitHub Activity Stats"
   />
