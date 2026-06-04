@@ -111,35 +111,9 @@
 
 <p align="center">
   <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=itsaqeeldev&theme=tokyonight"
-    width="100%"
-    alt="Profile Details"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=itsaqeeldev&theme=tokyonight"
-    width="48%"
-    alt="Repositories per Language"
-  />
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=itsaqeeldev&theme=tokyonight"
-    width="48%"
-    alt="Most Used Commit Languages"
-  />
-</p>
-
-<p align="center">
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=itsaqeeldev&theme=tokyonight"
-    width="48%"
-    alt="GitHub Stats"
-  />
-  <img
-    src="https://github-profile-summary-cards.vercel.app/api/cards/productive-time?username=itsaqeeldev&theme=tokyonight&utcOffset=5"
-    width="48%"
-    alt="Productive Time"
+    src="https://streak-stats.demolab.com?user=itsaqeeldev&theme=tokyonight&hide_border=true&border_radius=12&card_width=700&card_height=190&mode=daily"
+    width="70%"
+    alt="GitHub Streak Stats"
   />
 </p>
 
