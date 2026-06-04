@@ -111,11 +111,13 @@
 
 <p align="center">
   <img
-    src="https://streak-stats.demolab.com?user=itsaqeeldev&theme=tokyonight&hide_border=true&border_radius=12&card_width=700&card_height=190&mode=daily"
+    src="https://raw.githubusercontent.com/itsaqeeldev/itsaqeeldev/main/assets/github-streak.svg"
     width="70%"
-    alt="GitHub Streak Stats"
+    alt="GitHub Activity Stats"
   />
 </p>
+
+
 
 <!-- Animated extras -->
 <p align="center">
