@@ -240,7 +240,7 @@ async function main() {
 
 
   fs.mkdirSync("assets", { recursive: true });
-  fs.writeFileSync("assets/github-streak.svg", svg);
+  fs.writeFileSync("assets/github-streak-cyber.svg", svg);
 }
 
 main().catch((error) => {
