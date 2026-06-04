@@ -128,21 +128,34 @@ async function main() {
   }
 
 const svg = `
-<svg width="800" height="240" viewBox="0 0 800 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="840" height="250" viewBox="0 0 840 250" fill="none" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="800" y2="240" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#0B1220"/>
-      <stop offset="1" stop-color="#111827"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="840" y2="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#050816"/>
+      <stop offset="0.55" stop-color="#0A1023"/>
+      <stop offset="1" stop-color="#071427"/>
     </linearGradient>
 
-    <linearGradient id="accent" x1="0" y1="0" x2="800" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#22D3EE"/>
-      <stop offset="0.5" stop-color="#60A5FA"/>
-      <stop offset="1" stop-color="#A78BFA"/>
+    <linearGradient id="cyanGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#00F0FF"/>
+      <stop offset="1" stop-color="#00A3FF"/>
     </linearGradient>
 
-    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="12" result="blur"/>
+    <linearGradient id="purpleGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#5CE1FF"/>
+      <stop offset="1" stop-color="#7C4DFF"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="panelGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
       <feMerge>
         <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -150,63 +163,76 @@ const svg = `
     </filter>
   </defs>
 
-  <!-- Main Card -->
-  <rect width="800" height="240" rx="24" fill="url(#bg)"/>
-  <rect x="1" y="1" width="798" height="238" rx="23" stroke="#263244"/>
+  <!-- Background -->
+  <rect width="840" height="250" rx="26" fill="url(#bg)"/>
+  <rect x="1" y="1" width="838" height="248" rx="25" stroke="#15304D"/>
 
-  <!-- Top accent line -->
-  <rect x="24" y="20" width="752" height="4" rx="2" fill="url(#accent)" filter="url(#glow)"/>
+  <!-- Outer glow lines -->
+  <rect x="24" y="22" width="792" height="3" rx="1.5" fill="url(#cyanGlow)" filter="url(#softGlow)"/>
+  <rect x="24" y="225" width="792" height="2" rx="1" fill="url(#purpleGlow)" opacity="0.7" filter="url(#softGlow)"/>
+
+  <!-- Corner accents -->
+  <path d="M24 42V24H42" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M798 24H816V42" stroke="#00E5FF" stroke-width="2"/>
+  <path d="M24 208V226H42" stroke="#7C4DFF" stroke-width="2"/>
+  <path d="M798 226H816V208" stroke="#7C4DFF" stroke-width="2"/>
 
   <!-- Header -->
-  <text x="400" y="52" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="700">
-    GitHub Activity
+  <text x="420" y="50" text-anchor="middle" fill="#D9F7FF" font-family="Segoe UI, Arial, sans-serif" font-size="24" font-weight="800" letter-spacing="1">
+    GITHUB ACTIVITY
   </text>
-  <text x="400" y="74" text-anchor="middle" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="500">
-    Public + private contributions
+  <text x="420" y="72" text-anchor="middle" fill="#78BFD6" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="2">
+    CYBERPUNK STATS PANEL
   </text>
 
-  <!-- Stat cards -->
-  <rect x="28" y="100" width="230" height="108" rx="18" fill="#0F172A"/>
-  <rect x="28.5" y="100.5" width="229" height="107" rx="17.5" stroke="#1E293B"/>
+  <!-- Decorative line -->
+  <line x1="290" y1="84" x2="550" y2="84" stroke="#113A56" stroke-width="1.5"/>
+  <circle cx="420" cy="84" r="3" fill="#00E5FF" filter="url(#softGlow)"/>
 
-  <rect x="285" y="100" width="230" height="108" rx="18" fill="#0F172A"/>
-  <rect x="285.5" y="100.5" width="229" height="107" rx="17.5" stroke="#1E293B"/>
+  <!-- Panels -->
+  <g filter="url(#panelGlow)">
+    <rect x="28" y="105" width="244" height="102" rx="18" fill="#091426"/>
+    <rect x="28.8" y="105.8" width="242.4" height="100.4" rx="17.2" stroke="#103B5D"/>
+    
+    <rect x="298" y="105" width="244" height="102" rx="18" fill="#091426"/>
+    <rect x="298.8" y="105.8" width="242.4" height="100.4" rx="17.2" stroke="#103B5D"/>
+    
+    <rect x="568" y="105" width="244" height="102" rx="18" fill="#091426"/>
+    <rect x="568.8" y="105.8" width="242.4" height="100.4" rx="17.2" stroke="#103B5D"/>
+  </g>
 
-  <rect x="542" y="100" width="230" height="108" rx="18" fill="#0F172A"/>
-  <rect x="542.5" y="100.5" width="229" height="107" rx="17.5" stroke="#1E293B"/>
-
-  <!-- Small accent dots -->
-  <circle cx="55" cy="124" r="5" fill="#22D3EE"/>
-  <circle cx="312" cy="124" r="5" fill="#60A5FA"/>
-  <circle cx="569" cy="124" r="5" fill="#A78BFA"/>
+  <!-- Panel accent bars -->
+  <rect x="42" y="118" width="56" height="3" rx="1.5" fill="#00E5FF" filter="url(#softGlow)"/>
+  <rect x="312" y="118" width="56" height="3" rx="1.5" fill="#38BDF8" filter="url(#softGlow)"/>
+  <rect x="582" y="118" width="56" height="3" rx="1.5" fill="#7C4DFF" filter="url(#softGlow)"/>
 
   <!-- Labels -->
-  <text x="72" y="129" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">
-    Total Contributions
+  <text x="42" y="141" fill="#7FC8DC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">
+    TOTAL CONTRIBUTIONS
   </text>
-  <text x="329" y="129" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">
-    Current Streak
+  <text x="312" y="141" fill="#7FC8DC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">
+    CURRENT STREAK
   </text>
-  <text x="586" y="129" fill="#94A3B8" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="600">
-    Longest Streak
+  <text x="582" y="141" fill="#7FC8DC" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" letter-spacing="1">
+    LONGEST STREAK
   </text>
 
   <!-- Values -->
-  <text x="143" y="173" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">
+  <text x="150" y="181" text-anchor="middle" fill="#F4FEFF" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="900">
     ${formatNumber(totalContributions)}
   </text>
 
-  <text x="400" y="173" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">
+  <text x="420" y="181" text-anchor="middle" fill="#F4FEFF" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="900">
     ${formatNumber(currentStreak)}
   </text>
 
-  <text x="657" y="173" text-anchor="middle" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="34" font-weight="800">
+  <text x="690" y="181" text-anchor="middle" fill="#F4FEFF" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="900">
     ${formatNumber(longestStreak)}
   </text>
 
-  <!-- Tiny footer -->
-  <text x="400" y="222" text-anchor="middle" fill="#64748B" font-family="Segoe UI, Arial, sans-serif" font-size="11">
-    Updated automatically via GitHub Actions
+  <!-- Footer -->
+  <text x="420" y="233" text-anchor="middle" fill="#5B8AA5" font-family="Segoe UI, Arial, sans-serif" font-size="11" letter-spacing="1">
+    UPDATED AUTOMATICALLY VIA GITHUB ACTIONS
   </text>
 </svg>`.trim();
 
