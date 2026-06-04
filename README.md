@@ -192,4 +192,4 @@
 <p align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&section=footer&height=120&color=0:0f172a,50:1e293b,100:334155" width="100%" alt="Footer"/>
 </p>
-```
+
