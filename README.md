@@ -89,7 +89,7 @@
   <img src="https://skillicons.dev/icons?i=postman" height="36" title="Postman" alt="Postman"/>
 </p>
 
----
+
 
 ## 🚀 Featured Projects
 
@@ -117,7 +117,7 @@
     alt="GitHub Activity Stats"
   />
 </p>
-```
+
 
 
 
