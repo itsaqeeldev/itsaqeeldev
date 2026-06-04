@@ -28,7 +28,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
 
-          git add assets/github-streak.svg
+          git add assets/
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -39,6 +39,5 @@ jobs:
 
           git pull --rebase origin main
           git push origin HEAD:main
-
 
 
