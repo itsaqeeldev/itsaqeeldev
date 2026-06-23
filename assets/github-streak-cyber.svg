@@ -81,11 +81,11 @@
 
   <!-- Values -->
   <text x="150" y="181" text-anchor="middle" fill="#F4FEFF" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="900">
-    1,093
+    1,104
   </text>
 
   <text x="420" y="181" text-anchor="middle" fill="#F4FEFF" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="900">
-    0
+    1
   </text>
 
   <text x="690" y="181" text-anchor="middle" fill="#F4FEFF" font-family="Segoe UI, Arial, sans-serif" font-size="35" font-weight="900">
